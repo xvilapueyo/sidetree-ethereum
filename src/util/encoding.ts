@@ -1,9 +1,20 @@
 const multihash = require('multihashes');
 const base58 = require('bs58');
+const base64url = require('base64url');
 
-const isMultihash = (hash: string) => {
+const isB58EncodedMultihash = (hash: string): boolean => {
   try {
     const buffer = Buffer.from(base58.decode(hash));
+    multihash.decode(buffer);
+    return true;
+  } catch (e) {
+    return false;
+  }
+};
+
+const isB64EncodedMultihash = (hash: string): boolean => {
+  try {
+    const buffer = base64url.toBuffer(hash);
     multihash.decode(buffer);
     return true;
   } catch (e) {
@@ -20,6 +31,15 @@ const base58EncodedMultihashToBytes32 = (base58EncodedMultihash: string) => {
   );
 };
 
+const base64EncodedMultihashToBytes32 = (base64EncodedMultihash: string) => {
+  return (
+    '0x' +
+    multihash
+      .toHexString(base64url.toBuffer(base64EncodedMultihash))
+      .substring(4)
+  );
+};
+
 const bytes32EnodedMultihashToBase58EncodedMultihash = (
   bytes32EncodedMultihash: string
 ) => {
@@ -29,7 +49,9 @@ const bytes32EnodedMultihashToBase58EncodedMultihash = (
 };
 
 export default {
-  isMultihash,
+  isB58EncodedMultihash,
+  isB64EncodedMultihash,
   base58EncodedMultihashToBytes32,
+  base64EncodedMultihashToBytes32,
   bytes32EnodedMultihashToBase58EncodedMultihash
 };

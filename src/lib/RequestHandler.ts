@@ -67,7 +67,7 @@ export default class RequestHandler {
 
   /**
    * Handles sidetree transaction anchor request
-   * @param requestBody Request body containing the anchor file hash.
+   * @param requestBody Request body containing the anchor file hash, either in base64url or base58 encoding
    */
   public async handleAnchorRequest (requestBody: Buffer): Promise<any> {
     const jsonBody = JSON.parse(requestBody.toString());
@@ -76,20 +76,34 @@ export default class RequestHandler {
     // Respond with '400' if no anchor file hash was given.
     if (!anchorFileHash) {
       return {
-        status: ResponseStatus.BadRequest
+        status: ResponseStatus.BadRequest,
+        body: "No anchor file hash was given."
       };
     }
 
     // Respond with '400' if no anchor file hash is not lower case hex string
-    if (!encoding.isMultihash(anchorFileHash)) {
+    if (!encoding.isB58EncodedMultihash(anchorFileHash) && !encoding.isB64EncodedMultihash(anchorFileHash)) {
       return {
-        status: ResponseStatus.BadRequest
+        status: ResponseStatus.BadRequest,
+        body: "Error with hash encoding."
+      };
+    } 
+
+    // Respond with 400 if encoding does not match base64url or base58
+    let anchorFileHashAsBytes32: string;
+
+    if (encoding.isB64EncodedMultihash(anchorFileHash)) {
+      anchorFileHashAsBytes32 = encoding.base64EncodedMultihashToBytes32(anchorFileHash);
+    } else if (encoding.isB58EncodedMultihash(anchorFileHash)) {
+      anchorFileHashAsBytes32 = encoding.base58EncodedMultihashToBytes32(anchorFileHash);
+    } else {
+      return {
+        status: ResponseStatus.BadRequest,
+        body: "Error with hash encoding."
       };
     }
 
-    let anchorFileHashAsBytes32 = encoding.base58EncodedMultihashToBytes32(
-      anchorFileHash
-    );
+
 
     this.web3Svc
       .anchorHash(anchorFileHashAsBytes32)

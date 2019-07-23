@@ -13,8 +13,7 @@
       ],
       "payable": false,
       "stateMutability": "view",
-      "type": "function",
-      "signature": "0xaac4c5c4"
+      "type": "function"
     },
     {
       "anonymous": false,
@@ -31,8 +30,7 @@
         }
       ],
       "name": "Anchor",
-      "type": "event",
-      "signature": "0x5890dfddefcf0f55584aabc2ffa20af9345469cb722d5df543848b0bf124e8a1"
+      "type": "event"
     },
     {
       "constant": false,
@@ -46,18 +44,18 @@
       "outputs": [],
       "payable": false,
       "stateMutability": "nonpayable",
-      "type": "function",
-      "signature": "0x92677c69"
+      "type": "function"
     }
   ],
-  "bytecode": "0x60806040526000805534801561001457600080fd5b50610139806100246000396000f3fe60806040526004361061004c576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff16806392677c6914610051578063aac4c5c41461008c575b600080fd5b34801561005d57600080fd5b5061008a6004803603602081101561007457600080fd5b81019080803590602001909291905050506100b7565b005b34801561009857600080fd5b506100a1610107565b6040518082815260200191505060405180910390f35b7f5890dfddefcf0f55584aabc2ffa20af9345469cb722d5df543848b0bf124e8a181600054604051808381526020018281526020019250505060405180910390a160016000540160008190555050565b6000548156fea165627a7a72305820eb9fc5c2b3dbf35108cdf428a1856e134294d664e50b96da656701eddafcc5c80029",
-  "deployedBytecode": "0x60806040526004361061004c576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff16806392677c6914610051578063aac4c5c41461008c575b600080fd5b34801561005d57600080fd5b5061008a6004803603602081101561007457600080fd5b81019080803590602001909291905050506100b7565b005b34801561009857600080fd5b506100a1610107565b6040518082815260200191505060405180910390f35b7f5890dfddefcf0f55584aabc2ffa20af9345469cb722d5df543848b0bf124e8a181600054604051808381526020018281526020019250505060405180910390a160016000540160008190555050565b6000548156fea165627a7a72305820eb9fc5c2b3dbf35108cdf428a1856e134294d664e50b96da656701eddafcc5c80029",
+  "metadata": "{\"compiler\":{\"version\":\"0.5.0+commit.1d4f565a\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"constant\":false,\"inputs\":[{\"name\":\"_anchorHash\",\"type\":\"bytes32\"}],\"name\":\"anchorHash\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"transactionNumber\",\"outputs\":[{\"name\":\"\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"name\":\"anchorFileHash\",\"type\":\"bytes32\"},{\"indexed\":false,\"name\":\"transactionNumber\",\"type\":\"uint256\"}],\"name\":\"Anchor\",\"type\":\"event\"}],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"/host_mnt/c/dev/vid/sidetree-ethereum/contracts/SimpleSidetreeAnchor.sol\":\"SimpleSidetreeAnchor\"},\"evmVersion\":\"byzantium\",\"libraries\":{},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"/host_mnt/c/dev/vid/sidetree-ethereum/contracts/SimpleSidetreeAnchor.sol\":{\"keccak256\":\"0x4e2b0fdaa43dfc812ef021c84a6b6eb39cfbb151f66c46d0d2330ccc3de61a2a\",\"urls\":[\"bzzr://8898e2b58d9fe310bb26a2e034cf4738c4bfb5041ed97fe9420a0260efb25ed6\"]}},\"version\":1}",
+  "bytecode": "0x60806040526000805534801561001457600080fd5b50610139806100246000396000f3fe60806040526004361061004c576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff16806392677c6914610051578063aac4c5c41461008c575b600080fd5b34801561005d57600080fd5b5061008a6004803603602081101561007457600080fd5b81019080803590602001909291905050506100b7565b005b34801561009857600080fd5b506100a1610107565b6040518082815260200191505060405180910390f35b7f5890dfddefcf0f55584aabc2ffa20af9345469cb722d5df543848b0bf124e8a181600054604051808381526020018281526020019250505060405180910390a160016000540160008190555050565b6000548156fea165627a7a723058206fb9d56e9567285d042a1a7bf7900bfc27fea52c337d33b0b3fccf6c967092d00029",
+  "deployedBytecode": "0x60806040526004361061004c576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff16806392677c6914610051578063aac4c5c41461008c575b600080fd5b34801561005d57600080fd5b5061008a6004803603602081101561007457600080fd5b81019080803590602001909291905050506100b7565b005b34801561009857600080fd5b506100a1610107565b6040518082815260200191505060405180910390f35b7f5890dfddefcf0f55584aabc2ffa20af9345469cb722d5df543848b0bf124e8a181600054604051808381526020018281526020019250505060405180910390a160016000540160008190555050565b6000548156fea165627a7a723058206fb9d56e9567285d042a1a7bf7900bfc27fea52c337d33b0b3fccf6c967092d00029",
   "sourceMap": "24:308:2:-;;;95:1;60:36;;24:308;8:9:-1;5:2;;;30:1;27;20:12;5:2;24:308:2;;;;;;;",
   "deployedSourceMap": "24:308:2:-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;171:159;;8:9:-1;5:2;;;30:1;27;20:12;5:2;171:159:2;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;171:159:2;;;;;;;;;;;;;;;;;;;;60:36;;8:9:-1;5:2;;;30:1;27;20:12;5:2;60:36:2;;;;;;;;;;;;;;;;;;;;;;;171:159;234:38;241:11;254:17;;234:38;;;;;;;;;;;;;;;;;;;;;;;;322:1;302:17;;:21;282:17;:41;;;;171:159;:::o;60:36::-;;;;:::o",
   "source": "pragma solidity 0.5.0;\n\ncontract SimpleSidetreeAnchor {\n    uint256 public transactionNumber = 0;\n    event Anchor(bytes32 anchorFileHash, uint256 transactionNumber);\n    function anchorHash(bytes32 _anchorHash) public {\n        emit Anchor(_anchorHash, transactionNumber);\n        transactionNumber = transactionNumber + 1;\n    }\n}\n",
-  "sourcePath": "/Users/orie/Desktop/Transmute/sidetree-mono/packages/sidetree-ethereum/contracts/SimpleSidetreeAnchor.sol",
+  "sourcePath": "/host_mnt/c/dev/vid/sidetree-ethereum/contracts/SimpleSidetreeAnchor.sol",
   "ast": {
-    "absolutePath": "/Users/orie/Desktop/Transmute/sidetree-mono/packages/sidetree-ethereum/contracts/SimpleSidetreeAnchor.sol",
+    "absolutePath": "/host_mnt/c/dev/vid/sidetree-ethereum/contracts/SimpleSidetreeAnchor.sol",
     "exportedSymbols": {
       "SimpleSidetreeAnchor": [
         147
@@ -423,7 +421,7 @@
     "src": "0:333:2"
   },
   "legacyAST": {
-    "absolutePath": "/Users/orie/Desktop/Transmute/sidetree-mono/packages/sidetree-ethereum/contracts/SimpleSidetreeAnchor.sol",
+    "absolutePath": "/host_mnt/c/dev/vid/sidetree-ethereum/contracts/SimpleSidetreeAnchor.sol",
     "exportedSymbols": {
       "SimpleSidetreeAnchor": [
         147
@@ -796,8 +794,8 @@
     "5777": {
       "events": {},
       "links": {},
-      "address": "0x99aEd407cb466094bC318c00CbD6B60053736D5E",
-      "transactionHash": "0x6fc4acf155e8590ceac3642128a13b108c0f9d69268739ebe57f5bb8a71424a3"
+      "address": "0x413cD8706A5Bc72CF3B8769F5689f0EbfD1807E0",
+      "transactionHash": "0x0bb331193fb2cec09e51635a5225a623eb07c02eb37f7e9cfe0aea5bee3a77a6"
     },
     "1549485403115": {
       "events": {},
@@ -842,8 +840,8 @@
       "transactionHash": "0xe24c368fc06023f138064023cbe13c538e3a840dc01f383bc9a5eccdd5d52a26"
     }
   },
-  "schemaVersion": "3.0.1",
-  "updatedAt": "2019-02-07T21:11:46.311Z",
+  "schemaVersion": "3.0.9",
+  "updatedAt": "2019-06-21T09:22:50.511Z",
   "devdoc": {
     "methods": {}
   },

@@ -4,6 +4,9 @@ node_js:
 
 cache: npm
 
+env:
+  - ELEMENT_IPFS_MULTIADDR="/ip4/127.0.0.1/tcp/5001" ELEMENT_PROVIDER="http://localhost:8545" ELEMENT_MNEMONIC="weird ensure parent humor crawl doctor machine narrow subway bleak panel worth"
+
 before_install:
   # Install Ethereum Dependencies
   - npm i -g ganache-cli@6.3.0 truffle@5.0.3
